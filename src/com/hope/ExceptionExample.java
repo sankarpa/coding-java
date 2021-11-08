@@ -17,13 +17,13 @@ public class ExceptionExample {
 
         for(Integer i = 0; i< Integer.MAX_VALUE; i++){
 
-            IntegerStack stack  = new IntegerStack(i+1);
-            IntegerStack stack1  = new IntegerStack(i+1);
+            Stack stack  = new Stack(i+1);
+            Stack stack1  = new Stack(i+1);
 
-            IntegerStack stack2  = new IntegerStack(i+1);
-            IntegerStack stack3  = new IntegerStack(i+1);
-            IntegerStack stack4  = new IntegerStack(i+1);
-            IntegerStack stack5  = new IntegerStack(i+1);
+            Stack stack2  = new Stack(i+1);
+            Stack stack3  = new Stack(i+1);
+            Stack stack4  = new Stack(i+1);
+            Stack stack5  = new Stack(i+1);
             stack.printStack();
             stack1.printStack();
             stack2.printStack();

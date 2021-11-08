@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class IntegerStackTest {
 
-    private static IntegerStack stack = new IntegerStack(5);
+    private static Stack stack = new Stack(5);
 
 
     void testIsFullShouldReturnTrueWhenStackIsFull(){

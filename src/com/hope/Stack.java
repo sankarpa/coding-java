@@ -1,14 +1,14 @@
 package com.hope;
 
-public class IntegerStack {
+public class Stack<T> {
 
-    private int  stackArray[];
+    private T  stackArray[];
     private int top;
     private int size;
 
 
-    IntegerStack(int size){
-        stackArray = new int[size];
+    Stack(int size){
+        stackArray = (T[]) new Object[size];
         this.size = size;
         top = -1;
     }
@@ -17,11 +17,11 @@ public class IntegerStack {
         return top == -1;
     }
 
-    public void push(int element){
-        if(isFull()){
-            System.err.println("Stack is full");
-            return;
-        }
+    public void push(T element){
+//        if(isFull()){
+//            System.err.println("Stack is full");
+//            return;
+//        }
         top++;
         stackArray[top] = element;
     }
@@ -30,12 +30,12 @@ public class IntegerStack {
         return stackArray.length == size;
     }
 
-    public int pop(){
+    public T pop(){
         if(isEmpty()){
             System.err.println("Stack is empty");
-            return -1;
+            return (T) new Stack(-1);
         }
-        int popedElement = stackArray[top];
+        T popedElement = stackArray[top];
         top--;
         return popedElement;
     }
@@ -49,14 +49,21 @@ public class IntegerStack {
 
 
     public static void main(String[] args) {
-        IntegerStack stack = new IntegerStack(5);
+        Stack<Integer> stack = new Stack(5);
 
-        stack.pop();
         stack.push(1);
         stack.push(2);
         stack.push(3);
         stack.push(10);
         stack.printStack();
+
+
+        Stack<String> stringStack = new Stack<>(5);
+        stringStack.push("Hello");
+        stringStack.push("Hai");
+        stringStack.push("World");
+        stringStack.push("Good");
+        stringStack.printStack();
 
     }
 }
